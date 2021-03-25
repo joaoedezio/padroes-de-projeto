@@ -1,4 +1,4 @@
-import IQuackBehavior from "../IQuackBehavior";
+import IQuackBehavior from "../../interfaces/IQuackBehavior";
 
 export default class Quack implements IQuackBehavior {
     quack() {

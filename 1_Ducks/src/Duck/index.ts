@@ -1,5 +1,5 @@
-import IFlyBehavior from "../IFlyBehavior/index";
-import IQuackBehavior from "../IQuackBehavior/index";
+import IFlyBehavior from "../interfaces/IFlyBehavior/index";
+import IQuackBehavior from "../interfaces/IQuackBehavior/index";
 
 export default class Duck {
   flyBehavior: IFlyBehavior | undefined;
@@ -17,7 +17,15 @@ export default class Duck {
     this.quackBehavior && this.quackBehavior.quack();
   }
 
+  setFlyBehavior(fb: IFlyBehavior) {
+    this.flyBehavior = fb;
+  }
+
+  setQuackBehavior(qb: IQuackBehavior) {
+    this.quackBehavior = qb;
+  }
+
   swim() {
-      console.log("All ducks float, even decoys!");
+    console.log("All ducks float, even decoys!");
   }
 }
